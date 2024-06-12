@@ -5,7 +5,7 @@ pool:
 steps:
   - script: >-
       response=$(curl -s -o /dev/null -w "%{http_code}"
-      /gatecheck?source=azure&pipelineId=7&tenantId=02e24def-3903-4979-85b7-757a612cc3af);
+      https://da6f-2409-40c1-4033-3d74-7688-ae52-d95b-df4d.ngrok-free.app/gatecheck?source=azure&pipelineId=6&tenantId=02e24def-3903-4979-85b7-757a612cc3af);
       if [ "$response" -ne 200 ]; then exit 1; fi
     displayName: ASPM Gate Check
   - task: NodeTool@0
